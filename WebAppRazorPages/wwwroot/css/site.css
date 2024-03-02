@@ -354,6 +354,62 @@ a:hover {
   color: #FFFFFF;
 }
 
+form {
+  width: 100%;
+  display: grid;
+}
+form .input-group {
+  display: grid;
+}
+form .checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+form .checkbox-group .field-validation-error {
+  border: 2px solid red;
+  background-color: #FFE6E6;
+  color: #FF0000;
+  animation: blinker 1s linear infinite;
+}
+form .checkbox-group input [type=checkbox] {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+form .checkbox-group label {
+  margin: 0px;
+  font-weight: 400;
+}
+form .checkbox-group .input-validation-error {
+  border: 2px solid red;
+  background-color: #FFE6E6;
+}
+form label {
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+form input {
+  padding: 1rem;
+  border-radius: 8px !important;
+  border: 1px solid #D4D7E5;
+}
+form input::placeholder {
+  opacity: 0, 4;
+}
+form input.input-validation-error {
+  border: 2px solid red;
+  background-color: #FFE6E6;
+  color: #FF0000;
+}
+form input.input-validation-error::placeholder {
+  color: #FF0000;
+}
+form input .field-validation-error {
+  color: red;
+  font-size: 14px;
+}
+
 header {
   padding: 15px 0;
 }
@@ -405,14 +461,70 @@ header .container .account-buttons {
     display: flex;
   }
 }
-header .container .btn-mobilemenw {
+header .container .btn-mobile {
   grid-area: mobile;
   display: block;
 }
 @media (min-width: 992px) {
-  header .container .btn-mobilemenw {
+  header .container .btn-mobile {
     display: none;
   }
+}
+
+#signup {
+  height: 100%;
+}
+#signup .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  #signup .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #signup .container {
+    width: 45%;
+  }
+}
+#signup .container form {
+  width: 100%;
+  display: grid;
+  gap: 0;
+}
+#signup .container form .content {
+  display: grid;
+  gap: 1rem 2rem;
+}
+@media (min-width: 768px) {
+  #signup .container form .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+  }
+}
+#signup .container form .content #form-firstname {
+  grid-area: firstname;
+}
+#signup .container form .content #form-lastname {
+  grid-area: lastname;
+}
+#signup .container form .content #form-email {
+  grid-area: email;
+}
+#signup .container form .content #form-password {
+  grid-area: password;
+}
+#signup .container form .content #form-confirm {
+  grid-area: confirm;
+}
+#signup .container form .content #form-terms {
+  grid-area: terms;
+}
+#signup .container form .content #form-button {
+  grid-area: button;
 }
 
 #showcase {
@@ -624,6 +736,62 @@ header .container .btn-mobilemenw {
   padding-top: 10px;
   padding-bottom: 600px;
   padding-left: 20px;
+}
+
+#signup {
+  height: 100%;
+}
+#signup .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  #signup .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #signup .container {
+    width: 45%;
+  }
+}
+#signup .container form {
+  width: 100%;
+  display: grid;
+  gap: 0;
+}
+#signup .container form .content {
+  display: grid;
+  gap: 1rem 2rem;
+}
+@media (min-width: 768px) {
+  #signup .container form .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+  }
+}
+#signup .container form .content #form-firstname {
+  grid-area: firstname;
+}
+#signup .container form .content #form-lastname {
+  grid-area: lastname;
+}
+#signup .container form .content #form-email {
+  grid-area: email;
+}
+#signup .container form .content #form-password {
+  grid-area: password;
+}
+#signup .container form .content #form-confirm {
+  grid-area: confirm;
+}
+#signup .container form .content #form-terms {
+  grid-area: terms;
+}
+#signup .container form .content #form-button {
+  grid-area: button;
 }
 
 footer {
